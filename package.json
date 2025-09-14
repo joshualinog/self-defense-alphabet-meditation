@@ -1,0 +1,17 @@
+{
+  "name": "self-defense-alphabet-meditation",
+  "version": "1.0.0",
+  "description": "A web project for self-defense alphabet meditation.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "joshualinog",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}
