@@ -23,7 +23,9 @@
               class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] bg-gray-200 flex items-stretch cursor-pointer overflow-hidden"
               aria-label="Hebrew Alphabet Slideshow"
             >
-              <div id="slide-timer" class="absolute top-4 right-4 z-20 px-3 py-1 bg-black/70 text-white text-lg font-mono rounded shadow hidden">10</div>
+              <div id="slide-timer" class="absolute top-4 right-4 z-20 flex items-center justify-center w-16 h-16 bg-black/80 text-white text-3xl font-extrabold font-mono rounded-full shadow-lg border-4 border-blue-400 transition-colors duration-300 hidden">
+                <span id="slide-timer-value">10</span>
+              </div>
               <div id="slide-inner" class="flex w-full h-full">
                 <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center bg-gray-300">
                   <img id="slide-image" src="{{image}}" alt="{{name}}" class="object-cover w-full h-full" />
@@ -102,7 +104,7 @@
       // Fetch data.json and render slideshow and cards
       let hebrewSlides = [];
       let currentSlide = 0;
-      let slideInterval = null;
+      // let slideInterval = null;
       let slideshowEl, exitBtn;
 
       let timerInterval = null;
@@ -172,15 +174,14 @@
             updateTimerDisplay();
           }
         }, 1000);
-        slideInterval = setInterval(nextSlide, 10000);
         showTimer(true);
       }
 
       function stopSlideshow() {
-        if (slideInterval) {
-          clearInterval(slideInterval);
-          slideInterval = null;
-        }
+        // if (slideInterval) {
+        //   clearInterval(slideInterval);
+        //   slideInterval = null;
+        // }
         if (timerInterval) {
           clearInterval(timerInterval);
           timerInterval = null;
@@ -195,7 +196,26 @@
 
       function updateTimerDisplay() {
         const timerEl = document.getElementById("slide-timer");
-        if (timerEl) timerEl.textContent = timerValue;
+        const timerVal = document.getElementById("slide-timer-value");
+        if (timerVal) timerVal.textContent = timerValue;
+        // Animate color: blue (safe) > yellow (warning) > red (danger)
+        if (timerEl) {
+          timerEl.classList.remove(
+            "border-blue-400",
+            "border-yellow-400",
+            "border-red-500",
+            "bg-black/80",
+            "bg-yellow-600",
+            "bg-red-700"
+          );
+          if (timerValue > 5) {
+            timerEl.classList.add("border-blue-400", "bg-black/80");
+          } else if (timerValue > 2) {
+            timerEl.classList.add("border-yellow-400", "bg-yellow-600");
+          } else {
+            timerEl.classList.add("border-red-500", "bg-red-700");
+          }
+        }
       }
 
       function showTimer(show) {
@@ -260,6 +280,8 @@
       fetch("src/data.json")
         .then((res) => res.json())
         .then((data) => {
+          // Sort by 'order' property just in case
+          data.sort((a, b) => a.order - b.order);
           hebrewSlides = data;
           showSlide(0);
           renderCards(data);
