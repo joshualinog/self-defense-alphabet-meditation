@@ -23,7 +23,7 @@
               class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] bg-gray-200 flex items-stretch cursor-pointer overflow-hidden"
               aria-label="Hebrew Alphabet Slideshow"
             >
-              <div id="slide-timer" class="absolute top-4 right-4 z-20 flex items-center justify-center w-16 h-16 bg-black/80 text-white text-3xl font-extrabold font-mono rounded-full shadow-lg border-4 border-blue-400 transition-colors duration-300 hidden">
+              <div id="slide-timer" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-48 h-48 bg-black/80 text-white text-8xl font-extrabold font-mono rounded-full shadow-2xl border-8 border-green-500 transition-colors duration-300 hidden">
                 <span id="slide-timer-value">10</span>
               </div>
               <div id="slide-inner" class="flex w-full h-full">
@@ -198,10 +198,10 @@
         const timerEl = document.getElementById("slide-timer");
         const timerVal = document.getElementById("slide-timer-value");
         if (timerVal) timerVal.textContent = timerValue;
-        // Animate color: blue (safe) > yellow (warning) > red (danger)
+        // Animate color: green (safe) > yellow (warning) > red (danger)
         if (timerEl) {
           timerEl.classList.remove(
-            "border-blue-400",
+            "border-green-500",
             "border-yellow-400",
             "border-red-500",
             "bg-black/80",
@@ -209,7 +209,7 @@
             "bg-red-700"
           );
           if (timerValue > 5) {
-            timerEl.classList.add("border-blue-400", "bg-black/80");
+            timerEl.classList.add("border-green-500", "bg-black/80");
           } else if (timerValue > 2) {
             timerEl.classList.add("border-yellow-400", "bg-yellow-600");
           } else {
