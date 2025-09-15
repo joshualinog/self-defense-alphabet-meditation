@@ -23,13 +23,16 @@
               class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] bg-gray-200 flex items-stretch cursor-pointer overflow-hidden"
               aria-label="Hebrew Alphabet Slideshow"
             >
-              <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center bg-gray-300">
-                <img id="slide-image" src="{{image}}" alt="{{name}}" class="object-cover w-full h-full" />
-              </div>
-              <div id="slide-content" class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4">
-                <span id="slide-letter" class="text-8xl font-extrabold text-gray-800">{{letter}}</span>
-                <div class="mt-4 text-lg text-gray-600" id="slide-label">{{name}}</div>
-                <div class="mt-4 text-base text-gray-600" id="slide-info">{{{info}}}</div>
+              <div id="slide-timer" class="absolute top-4 right-4 z-20 px-3 py-1 bg-black/70 text-white text-lg font-mono rounded shadow hidden">10</div>
+              <div id="slide-inner" class="flex w-full h-full">
+                <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center bg-gray-300">
+                  <img id="slide-image" src="{{image}}" alt="{{name}}" class="object-cover w-full h-full" />
+                </div>
+                <div id="slide-content" class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4">
+                  <span id="slide-letter" class="text-8xl font-extrabold text-gray-800">{{letter}}</span>
+                  <div class="mt-4 text-lg text-gray-600" id="slide-label">{{name}}</div>
+                  <div class="mt-4 text-base text-gray-600" id="slide-info">{{{info}}}</div>
+                </div>
               </div>
               <button
                 id="exit-fullscreen"
@@ -50,10 +53,11 @@
             >
           </h1>
           <p class="text-lg text-gray-700 mb-6">
-            Quickly design and customize responsive mobile-first sites with
-            Bootstrap, the world’s most popular front-end open source toolkit,
-            featuring Sass variables and mixins, responsive grid system,
-            extensive prebuilt components, and powerful JavaScript plugins.
+            This is a tool for people who want to combine meditation with play
+            with exercise. Or if you just want to exercise and learn the
+            fundamentals of the Krav Maga self-defense system, you can use our
+            slideshow for a workout routine! For 10 seconds which will give you
+            enough time to perform the moves. Go ahead try it out!
           </p>
           <div class="flex flex-col md:flex-row gap-3 md:gap-4">
             <button
@@ -101,35 +105,102 @@
       let slideInterval = null;
       let slideshowEl, exitBtn;
 
+      let timerInterval = null;
+      let timerValue = 10;
+
       function renderSlideshow(slide) {
-        const template =
-          document.getElementById("slideshow-template").innerHTML;
-        document.getElementById("slideshow-root").innerHTML = Mustache.render(
-          template,
-          slide
-        );
+        // Only render once if not present
+        if (!document.getElementById("hebrew-slideshow")) {
+          const template =
+            document.getElementById("slideshow-template").innerHTML;
+          document.getElementById("slideshow-root").innerHTML = Mustache.render(
+            template,
+            slide
+          );
+        }
         slideshowEl = document.getElementById("hebrew-slideshow");
         exitBtn = document.getElementById("exit-fullscreen");
       }
 
+      function updateSlideContent(slide) {
+        // Only update the content of child elements, not the structure
+        const img = document.getElementById("slide-image");
+        const letter = document.getElementById("slide-letter");
+        const label = document.getElementById("slide-label");
+        const info = document.getElementById("slide-info");
+        if (img) {
+          img.src = slide.image;
+          img.alt = slide.name;
+        }
+        if (letter) letter.textContent = slide.letter;
+        if (label) label.textContent = slide.name;
+        if (info) info.innerHTML = slide.info;
+      }
+
       function showSlide(idx) {
         currentSlide = idx;
-        renderSlideshow(hebrewSlides[currentSlide]);
-        attachSlideshowEvents();
+        if (!document.getElementById("hebrew-slideshow")) {
+          renderSlideshow(hebrewSlides[currentSlide]);
+          attachSlideshowEvents();
+        }
+        updateSlideContent(hebrewSlides[currentSlide]);
+        // Only reset timer if in fullscreen
+        if (document.fullscreenElement === slideshowEl) {
+          resetTimer();
+        }
       }
 
       function nextSlide() {
         currentSlide = (currentSlide + 1) % hebrewSlides.length;
-        showSlide(currentSlide);
+        updateSlideContent(hebrewSlides[currentSlide]);
+        // Only reset timer if in fullscreen
+        if (document.fullscreenElement === slideshowEl) {
+          resetTimer();
+        }
       }
 
       function startSlideshow() {
-        if (slideInterval) clearInterval(slideInterval);
+        stopSlideshow(); // Always clear any previous intervals
+        timerValue = 10;
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+          timerValue--;
+          updateTimerDisplay();
+          if (timerValue <= 0) {
+            nextSlide();
+            timerValue = 10;
+            updateTimerDisplay();
+          }
+        }, 1000);
         slideInterval = setInterval(nextSlide, 10000);
+        showTimer(true);
       }
 
       function stopSlideshow() {
-        if (slideInterval) clearInterval(slideInterval);
+        if (slideInterval) {
+          clearInterval(slideInterval);
+          slideInterval = null;
+        }
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        showTimer(false);
+      }
+
+      function resetTimer() {
+        timerValue = 10;
+        updateTimerDisplay();
+      }
+
+      function updateTimerDisplay() {
+        const timerEl = document.getElementById("slide-timer");
+        if (timerEl) timerEl.textContent = timerValue;
+      }
+
+      function showTimer(show) {
+        const timerEl = document.getElementById("slide-timer");
+        if (timerEl) timerEl.classList.toggle("hidden", !show);
       }
 
       function openFullscreen() {
@@ -141,6 +212,7 @@
           slideshowEl.msRequestFullscreen();
         }
         exitBtn.classList.remove("hidden");
+        // Do not start slideshow here; wait for fullscreenchange event
       }
 
       function closeFullscreen() {
@@ -152,6 +224,7 @@
           document.msExitFullscreen();
         }
         exitBtn.classList.add("hidden");
+        showTimer(false);
       }
 
       function attachSlideshowEvents() {
@@ -169,6 +242,8 @@
         } else {
           stopSlideshow();
           if (exitBtn) exitBtn.classList.add("hidden");
+          // Always show the first slide when exiting fullscreen
+          showSlide(0);
         }
       });
 
