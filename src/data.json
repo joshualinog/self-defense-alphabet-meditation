@@ -1,0 +1,156 @@
+[
+  {
+    "letter": "א",
+    "name": "Alef",
+    "image": "https://placehold.co/400x340?text=Alef",
+    "cardImage": "https://placehold.co/400x180?text=Alef",
+    "info": "1. Left straight punch<br />2. Cross-body punch"
+  },
+  {
+    "letter": "ב",
+    "name": "Bet",
+    "image": "https://placehold.co/400x340?text=Bet",
+    "cardImage": "https://placehold.co/400x180?text=Bet",
+    "info": "3. Palm Heel strike<br />4. Eye strike"
+  },
+  {
+    "letter": "ג",
+    "name": "Gimel",
+    "image": "https://placehold.co/400x340?text=Gimel",
+    "cardImage": "https://placehold.co/400x180?text=Gimel",
+    "info": "5. Straight punch with advance<br />6. Straight punch with retreat<br />7. Straight punch low"
+  },
+  {
+    "letter": "ד",
+    "name": "Dalet",
+    "image": "https://placehold.co/400x340?text=Dalet",
+    "cardImage": "https://placehold.co/400x180?text=Dalet",
+    "info": "8. Hammer fist to the side<br />9. Hammerfist to the back"
+  },
+  {
+    "letter": "ה",
+    "name": "He",
+    "image": "https://placehold.co/400x340?text=He",
+    "cardImage": "https://placehold.co/400x180?text=He",
+    "info": "10. Forward hammerfist<br />22. knee strike"
+  },
+  {
+    "letter": "ו",
+    "name": "Vav",
+    "image": "https://placehold.co/400x340?text=Vav",
+    "cardImage": "https://placehold.co/400x180?text=Vav",
+    "info": "12. Horizontal high elbow strike (elbow 1)<br />13. Sideways elbow strike (elbow 2)<br />14. Horizontal elbow strike backward (elbow 3)"
+  },
+  {
+    "letter": "ז",
+    "name": "Zayin",
+    "image": "https://placehold.co/400x340?text=Zayin",
+    "cardImage": "https://placehold.co/400x180?text=Zayin",
+    "info": "15. Vertical elbow strike backward low (elbow 4)<br />16. Vertical elbow strike backward (elbow 5)<br />17. Vertical Elbow strike Forward and Upward (elbow 6)<br />18. Vertical Elbow Strike Forward and Down (Elbow 7)"
+  },
+  {
+    "letter": "ח",
+    "name": "Chet",
+    "image": "https://placehold.co/400x340?text=Chet",
+    "cardImage": "https://placehold.co/400x180?text=Chet",
+    "info": "42. headlock from the side"
+  },
+  {
+    "letter": "ט",
+    "name": "Tet",
+    "image": "https://placehold.co/400x340?text=Tet",
+    "cardImage": "https://placehold.co/400x180?text=Tet",
+    "info": "19. Front Kick (Regular)<br />20. Front Kick (vertical target)"
+  },
+  {
+    "letter": "י",
+    "name": "Yud",
+    "image": "https://placehold.co/400x340?text=Yud",
+    "cardImage": "https://placehold.co/400x180?text=Yud",
+    "info": "11. Downward hammerfist<br />19. Front Kick (Regular)"
+  },
+  {
+    "letter": "כ",
+    "name": "Kaf",
+    "image": "https://placehold.co/400x340?text=Kaf",
+    "cardImage": "https://placehold.co/400x180?text=Kaf",
+    "info": "23. round knee strike<br />21. round kick"
+  },
+  {
+    "letter": "ל",
+    "name": "Lamed",
+    "image": "https://placehold.co/400x340?text=Lamed",
+    "cardImage": "https://placehold.co/400x180?text=Lamed",
+    "info": "24. front kick/hammer fist"
+  },
+  {
+    "letter": "מ",
+    "name": "Mem",
+    "image": "https://placehold.co/400x340?text=Mem",
+    "cardImage": "https://placehold.co/400x180?text=Mem",
+    "info": "25. front kick / straight punch"
+  },
+  {
+    "letter": "נ",
+    "name": "Nun",
+    "image": "https://placehold.co/400x340?text=Nun",
+    "cardImage": "https://placehold.co/400x180?text=Nun",
+    "info": "43. wrist release: same-side hand (elbow to elbow)<br />44. wrist release: opposite-side hand (hitchhike out)<br />45. wrist release: Two Hands Held High<br />46. wrist release: two hands held down<br />47. risk release: wrist held by two hands"
+  },
+  {
+    "letter": "ס",
+    "name": "Samekh",
+    "image": "https://placehold.co/400x340?text=Samekh",
+    "cardImage": "https://placehold.co/400x180?text=Samekh",
+    "info": "26. 360° defense (outside defense) position 1<br />27. 360° defense (outside defense) position 2<br />28. 360° defense (outside defense) position 3<br />29. 360° defense (outside defense) position 4"
+  },
+  {
+    "letter": "ע",
+    "name": "Ayin",
+    "image": "https://placehold.co/400x340?text=Ayin",
+    "cardImage": "https://placehold.co/400x180?text=Ayin",
+    "info": "30. 360° defense (outside defense) position 5<br />31. 360° defense (outside defense) position 6<br />32. 360° defense (outside defense) position 7"
+  },
+  {
+    "letter": "פ",
+    "name": "Peh",
+    "image": "https://placehold.co/400x340?text=Peh",
+    "cardImage": "https://placehold.co/400x180?text=Peh",
+    "info": "33. inside defense against straight punch<br />34. inside defense against straight punch low<br />35. inside defense and 360° against punches"
+  },
+  {
+    "letter": "צ",
+    "name": "Tsadi",
+    "image": "https://placehold.co/400x340?text=Tsadi",
+    "cardImage": "https://placehold.co/400x180?text=Tsadi",
+    "info": "36. choke from the front (two handed pluck)<br />37. choke from the front (one handed pluck)"
+  },
+  {
+    "letter": "ק",
+    "name": "Qof",
+    "image": "https://placehold.co/400x340?text=Qof",
+    "cardImage": "https://placehold.co/400x180?text=Qof",
+    "info": "38. choke from behind<br />39. choke from the side"
+  },
+  {
+    "letter": "ר",
+    "name": "Resh",
+    "image": "https://placehold.co/400x340?text=Resh",
+    "cardImage": "https://placehold.co/400x180?text=Resh",
+    "info": "40. choke from the front with a push<br />41. choke from behind with a push"
+  },
+  {
+    "letter": "ש",
+    "name": "Shin",
+    "image": "https://placehold.co/400x340?text=Shin",
+    "cardImage": "https://placehold.co/400x180?text=Shin",
+    "info": "48. back position<br />49. back position: movement on the ground<br />50. side position<br />51. side position: movement on the ground"
+  },
+  {
+    "letter": "ת",
+    "name": "Tav",
+    "image": "https://placehold.co/400x340?text=Tav",
+    "cardImage": "https://placehold.co/400x180?text=Tav",
+    "info": "52. front kick from the ground<br />53. round kick from the ground<br />54. sidekick from the ground<br />55. getting up"
+  }
+]
