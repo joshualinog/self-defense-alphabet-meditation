@@ -12,15 +12,266 @@
         class="flex flex-col-reverse lg:flex-row-reverse items-center gap-10 lg:gap-20 max-w-7xl mx-auto px-4"
       >
         <div class="w-full sm:w-4/5 lg:w-1/2">
-          <img
-            src="bootstrap-themes.png"
-            alt="Bootstrap Themes"
-            class="block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-lg h-auto"
-            width="700"
-            height="500"
-            loading="lazy"
-          />
+          <section
+            id="hebrew-slideshow"
+            tabindex="0"
+            class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] bg-gray-200 flex items-stretch cursor-pointer overflow-hidden"
+            aria-label="Hebrew Alphabet Slideshow"
+          >
+            <!-- Left: Image -->
+            <div
+              id="slide-image-container"
+              class="w-1/2 h-full flex items-center justify-center bg-gray-300"
+            >
+              <img
+                id="slide-image"
+                src="https://placehold.co/400x340"
+                alt="Alef"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <!-- Right: Card Content -->
+            <div
+              id="slide-content"
+              class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4"
+            >
+              <span
+                id="slide-letter"
+                class="text-8xl font-extrabold text-gray-800"
+                >א</span
+              >
+              <div class="mt-4 text-lg text-gray-600" id="slide-label">
+                Alef
+              </div>
+            </div>
+            <button
+              id="exit-fullscreen"
+              class="hidden absolute top-4 right-4 z-10 px-3 py-1 bg-white/80 rounded text-gray-700 font-semibold shadow hover:bg-white transition"
+            >
+              Exit Fullscreen
+            </button>
+          </section>
         </div>
+        <script>
+          // Hebrew slides: letter, name, and image
+          const hebrewSlides = [
+            {
+              letter: "א",
+              name: "Alef",
+              image: "https://placehold.co/400x340?text=Alef",
+              info: `1. Left straight punch<br />2. Cross-body punch`,
+            },
+            {
+              letter: "ב",
+              name: "Bet",
+              image: "https://placehold.co/400x340?text=Bet",
+              info: `3. Palm Heel strike<br />4. Eye strike`,
+            },
+            {
+              letter: "ג",
+              name: "Gimel",
+              image: "https://placehold.co/400x340?text=Gimel",
+              info: `5. Straight punch with advance<br />6. Straight punch with retreat<br />7. Straight punch low`,
+            },
+            {
+              letter: "ד",
+              name: "Dalet",
+              image: "https://placehold.co/400x340?text=Dalet",
+              info: `8. Hammer fist to the side<br />9. Hammerfist to the back`,
+            },
+            {
+              letter: "ה",
+              name: "He",
+              image: "https://placehold.co/400x340?text=He",
+              info: `10. Forward hammerfist<br />22. knee strike`,
+            },
+            {
+              letter: "ו",
+              name: "Vav",
+              image: "https://placehold.co/400x340?text=Vav",
+              info: `12. Horizontal high elbow strike (elbow 1)<br />13. Sideways elbow strike (elbow 2)<br />14. Horizontal elbow strike backward (elbow 3)`,
+            },
+            {
+              letter: "ז",
+              name: "Zayin",
+              image: "https://placehold.co/400x340?text=Zayin",
+              info: `15. Vertical elbow strike backward low (elbow 4)<br />16. Vertical elbow strike backward (elbow 5)<br />17. Vertical Elbow strike Forward and Upward (elbow 6)<br />18. Vertical Elbow Strike Forward and Down (Elbow 7)`,
+            },
+            {
+              letter: "ח",
+              name: "Chet",
+              image: "https://placehold.co/400x340?text=Chet",
+              info: `42. headlock from the side`,
+            },
+            {
+              letter: "ט",
+              name: "Tet",
+              image: "https://placehold.co/400x340?text=Tet",
+              info: `19. Front Kick (Regular)<br />20. Front Kick (vertical target)`,
+            },
+            {
+              letter: "י",
+              name: "Yud",
+              image: "https://placehold.co/400x340?text=Yud",
+              info: `11. Downward hammerfist<br />19. Front Kick (Regular)`,
+            },
+            {
+              letter: "כ",
+              name: "Kaf",
+              image: "https://placehold.co/400x340?text=Kaf",
+              info: `23. round knee strike<br />21. round kick`,
+            },
+            {
+              letter: "ל",
+              name: "Lamed",
+              image: "https://placehold.co/400x340?text=Lamed",
+              info: `24. front kick/hammer fist`,
+            },
+            {
+              letter: "מ",
+              name: "Mem",
+              image: "https://placehold.co/400x340?text=Mem",
+              info: `25. front kick / straight punch`,
+            },
+            {
+              letter: "נ",
+              name: "Nun",
+              image: "https://placehold.co/400x340?text=Nun",
+              info: `43. wrist release: same-side hand (elbow to elbow)<br />44. wrist release: opposite-side hand (hitchhike out)<br />45. wrist release: Two Hands Held High<br />46. wrist release: two hands held down<br />47. risk release: wrist held by two hands`,
+            },
+            {
+              letter: "ס",
+              name: "Samekh",
+              image: "https://placehold.co/400x340?text=Samekh",
+              info: `26. 360° defense (outside defense) position 1<br />27. 360° defense (outside defense) position 2<br />28. 360° defense (outside defense) position 3<br />29. 360° defense (outside defense) position 4`,
+            },
+            {
+              letter: "ע",
+              name: "Ayin",
+              image: "https://placehold.co/400x340?text=Ayin",
+              info: `30. 360° defense (outside defense) position 5<br />31. 360° defense (outside defense) position 6<br />32. 360° defense (outside defense) position 7`,
+            },
+            {
+              letter: "פ",
+              name: "Peh",
+              image: "https://placehold.co/400x340?text=Peh",
+              info: `33. inside defense against straight punch<br />34. inside defense against straight punch low<br />35. inside defense and 360° against punches`,
+            },
+            {
+              letter: "צ",
+              name: "Tsadi",
+              image: "https://placehold.co/400x340?text=Tsadi",
+              info: `36. choke from the front (two handed pluck)<br />37. choke from the front (one handed pluck)`,
+            },
+            {
+              letter: "ק",
+              name: "Qof",
+              image: "https://placehold.co/400x340?text=Qof",
+              info: `38. choke from behind<br />39. choke from the side`,
+            },
+            {
+              letter: "ר",
+              name: "Resh",
+              image: "https://placehold.co/400x340?text=Resh",
+              info: `40. choke from the front with a push<br />41. choke from behind with a push`,
+            },
+            {
+              letter: "ש",
+              name: "Shin",
+              image: "https://placehold.co/400x340?text=Shin",
+              info: `48. back position<br />49. back position: movement on the ground<br />50. side position<br />51. side position: movement on the ground`,
+            },
+            {
+              letter: "ת",
+              name: "Tav",
+              image: "https://placehold.co/400x340?text=Tav",
+              info: `52. front kick from the ground<br />53. round kick from the ground<br />54. sidekick from the ground<br />55. getting up`,
+            },
+          ];
+
+          let currentSlide = 0;
+          let slideInterval = null;
+          const slideLetter = document.getElementById("slide-letter");
+          const slideLabel = document.getElementById("slide-label");
+          const slideImage = document.getElementById("slide-image");
+          const slideshow = document.getElementById("hebrew-slideshow");
+          const exitBtn = document.getElementById("exit-fullscreen");
+
+          const slideInfo = document.createElement("div");
+          slideInfo.id = "slide-info";
+          slideInfo.className = "mt-4 text-base text-gray-600";
+          // Insert slideInfo after slideLabel if not present
+          const slideContent = document.getElementById("slide-content");
+          if (!document.getElementById("slide-info")) {
+            slideContent.appendChild(slideInfo);
+          }
+
+          function showSlide(idx) {
+            const slide = hebrewSlides[idx];
+            slideLetter.textContent = slide.letter;
+            slideLabel.textContent = slide.name;
+            slideImage.src = slide.image;
+            slideImage.alt = slide.name;
+            slideInfo.innerHTML = slide.info;
+          }
+
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % hebrewSlides.length;
+            showSlide(currentSlide);
+          }
+
+          function startSlideshow() {
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 10000);
+          }
+
+          function stopSlideshow() {
+            if (slideInterval) clearInterval(slideInterval);
+          }
+
+          // Fullscreen logic
+          function openFullscreen() {
+            if (slideshow.requestFullscreen) {
+              slideshow.requestFullscreen();
+            } else if (slideshow.webkitRequestFullscreen) {
+              slideshow.webkitRequestFullscreen();
+            } else if (slideshow.msRequestFullscreen) {
+              slideshow.msRequestFullscreen();
+            }
+            exitBtn.classList.remove("hidden");
+          }
+
+          function closeFullscreen() {
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+              document.msExitFullscreen();
+            }
+            exitBtn.classList.add("hidden");
+          }
+
+          slideshow.addEventListener("click", () => {
+            openFullscreen();
+          });
+          exitBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            closeFullscreen();
+          });
+
+          document.addEventListener("fullscreenchange", () => {
+            if (document.fullscreenElement === slideshow) {
+              startSlideshow();
+            } else {
+              stopSlideshow();
+              exitBtn.classList.add("hidden");
+            }
+          });
+
+          // Initialize first slide
+          showSlide(0);
+        </script>
         <div class="w-full lg:w-1/2">
           <h1
             class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4"
