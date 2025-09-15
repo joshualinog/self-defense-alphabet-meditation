@@ -1,3 +1,4 @@
+
 // Coolors palette variables
 $dark-green: #2A4937;
 $medium-green: #44AE4A;
@@ -7,6 +8,10 @@ $orange: #E8A139;
 $teal: #67C7C6;
 $blue: #41A1DB;
 
+// Fullscreen slider right half background
+.slider-right-fullscreen.bg-yellow-500 {
+	background-color: $yellow !important;
+}
 
 // Custom background utility classes (like Tailwind)
 .bg-dark-green-500 { background-color: $dark-green !important; }

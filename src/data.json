@@ -3,7 +3,7 @@
     "order": 0,
     "letter": "א",
     "name": "Alef",
-    "image": "https://placehold.co/400x340?text=Alef",
+    "image": "https://placehold.co/400x340?text=Alef&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Alef",
     "info": "1. Left straight punch<br />2. Cross-body punch"
   },
@@ -11,7 +11,7 @@
     "order": 1,
     "letter": "ב",
     "name": "Bet",
-    "image": "https://placehold.co/400x340?text=Bet",
+    "image": "https://placehold.co/400x340?text=Bet&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Bet",
     "info": "3. Palm Heel strike<br />4. Eye strike"
   },
@@ -19,7 +19,7 @@
     "order": 2,
     "letter": "ג",
     "name": "Gimel",
-    "image": "https://placehold.co/400x340?text=Gimel",
+    "image": "https://placehold.co/400x340?text=Gimel&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Gimel",
     "info": "5. Straight punch with advance<br />6. Straight punch with retreat<br />7. Straight punch low"
   },
@@ -27,7 +27,7 @@
     "order": 3,
     "letter": "ד",
     "name": "Dalet",
-    "image": "https://placehold.co/400x340?text=Dalet",
+    "image": "https://placehold.co/400x340?text=Dalet&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Dalet",
     "info": "8. Hammer fist to the side<br />9. Hammerfist to the back"
   },
@@ -35,7 +35,7 @@
     "order": 4,
     "letter": "ה",
     "name": "He",
-    "image": "https://placehold.co/400x340?text=He",
+    "image": "https://placehold.co/400x340?text=He&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=He",
     "info": "10. Forward hammerfist<br />22. knee strike"
   },
@@ -43,7 +43,7 @@
     "order": 5,
     "letter": "ו",
     "name": "Vav",
-    "image": "https://placehold.co/400x340?text=Vav",
+    "image": "https://placehold.co/400x340?text=Vav&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Vav",
     "info": "12. Horizontal high elbow strike (elbow 1)<br />13. Sideways elbow strike (elbow 2)<br />14. Horizontal elbow strike backward (elbow 3)"
   },
@@ -51,7 +51,7 @@
     "order": 6,
     "letter": "ז",
     "name": "Zayin",
-    "image": "https://placehold.co/400x340?text=Zayin",
+    "image": "https://placehold.co/400x340?text=Zayin&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Zayin",
     "info": "15. Vertical elbow strike backward low (elbow 4)<br />16. Vertical elbow strike backward (elbow 5)<br />17. Vertical Elbow strike Forward and Upward (elbow 6)<br />18. Vertical Elbow Strike Forward and Down (Elbow 7)"
   },
@@ -59,7 +59,7 @@
     "order": 7,
     "letter": "ח",
     "name": "Chet",
-    "image": "https://placehold.co/400x340?text=Chet",
+    "image": "https://placehold.co/400x340?text=Chet&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Chet",
     "info": "42. headlock from the side"
   },
@@ -67,7 +67,7 @@
     "order": 8,
     "letter": "ט",
     "name": "Tet",
-    "image": "https://placehold.co/400x340?text=Tet",
+    "image": "https://placehold.co/400x340?text=Tet&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Tet",
     "info": "19. Front Kick (Regular)<br />20. Front Kick (vertical target)"
   },
@@ -75,7 +75,7 @@
     "order": 9,
     "letter": "י",
     "name": "Yud",
-    "image": "https://placehold.co/400x340?text=Yud",
+    "image": "https://placehold.co/400x340?text=Yud&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Yud",
     "info": "11. Downward hammerfist<br />19. Front Kick (Regular)"
   },
@@ -83,7 +83,7 @@
     "order": 10,
     "letter": "כ",
     "name": "Kaf",
-    "image": "https://placehold.co/400x340?text=Kaf",
+    "image": "https://placehold.co/400x340?text=Kaf&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Kaf",
     "info": "23. round knee strike<br />21. round kick"
   },
@@ -91,7 +91,7 @@
     "order": 11,
     "letter": "ל",
     "name": "Lamed",
-    "image": "https://placehold.co/400x340?text=Lamed",
+    "image": "https://placehold.co/400x340?text=Lamed&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Lamed",
     "info": "24. front kick/hammer fist"
   },
@@ -99,7 +99,7 @@
     "order": 12,
     "letter": "מ",
     "name": "Mem",
-    "image": "https://placehold.co/400x340?text=Mem",
+    "image": "https://placehold.co/400x340?text=Mem&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Mem",
     "info": "25. front kick / straight punch"
   },
@@ -107,7 +107,7 @@
     "order": 13,
     "letter": "נ",
     "name": "Nun",
-    "image": "https://placehold.co/400x340?text=Nun",
+    "image": "https://placehold.co/400x340?text=Nun&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Nun",
     "info": "43. wrist release: same-side hand (elbow to elbow)<br />44. wrist release: opposite-side hand (hitchhike out)<br />45. wrist release: Two Hands Held High<br />46. wrist release: two hands held down<br />47. risk release: wrist held by two hands"
   },
@@ -115,7 +115,7 @@
     "order": 14,
     "letter": "ס",
     "name": "Samekh",
-    "image": "https://placehold.co/400x340?text=Samekh",
+    "image": "https://placehold.co/400x340?text=Samekh&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Samekh",
     "info": "26. 360° defense (outside defense) position 1<br />27. 360° defense (outside defense) position 2<br />28. 360° defense (outside defense) position 3<br />29. 360° defense (outside defense) position 4"
   },
@@ -123,7 +123,7 @@
     "order": 15,
     "letter": "ע",
     "name": "Ayin",
-    "image": "https://placehold.co/400x340?text=Ayin",
+    "image": "https://placehold.co/400x340?text=Ayin&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Ayin",
     "info": "30. 360° defense (outside defense) position 5<br />31. 360° defense (outside defense) position 6<br />32. 360° defense (outside defense) position 7"
   },
@@ -131,7 +131,7 @@
     "order": 16,
     "letter": "פ",
     "name": "Peh",
-    "image": "https://placehold.co/400x340?text=Peh",
+    "image": "https://placehold.co/400x340?text=Peh&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Peh",
     "info": "33. inside defense against straight punch<br />34. inside defense against straight punch low<br />35. inside defense and 360° against punches"
   },
@@ -139,7 +139,7 @@
     "order": 17,
     "letter": "צ",
     "name": "Tsadi",
-    "image": "https://placehold.co/400x340?text=Tsadi",
+    "image": "https://placehold.co/400x340?text=Tsadi&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Tsadi",
     "info": "36. choke from the front (two handed pluck)<br />37. choke from the front (one handed pluck)"
   },
@@ -147,7 +147,7 @@
     "order": 18,
     "letter": "ק",
     "name": "Qof",
-    "image": "https://placehold.co/400x340?text=Qof",
+    "image": "https://placehold.co/400x340?text=Qof&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Qof",
     "info": "38. choke from behind<br />39. choke from the side"
   },
@@ -155,7 +155,7 @@
     "order": 19,
     "letter": "ר",
     "name": "Resh",
-    "image": "https://placehold.co/400x340?text=Resh",
+    "image": "https://placehold.co/400x340?text=Resh&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Resh",
     "info": "40. choke from the front with a push<br />41. choke from behind with a push"
   },
@@ -163,7 +163,7 @@
     "order": 20,
     "letter": "ש",
     "name": "Shin",
-    "image": "https://placehold.co/400x340?text=Shin",
+    "image": "https://placehold.co/400x340?text=Shin&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Shin",
     "info": "48. back position<br />49. back position: movement on the ground<br />50. side position<br />51. side position: movement on the ground"
   },
@@ -171,7 +171,7 @@
     "order": 21,
     "letter": "ת",
     "name": "Tav",
-    "image": "https://placehold.co/400x340?text=Tav",
+    "image": "https://placehold.co/400x340?text=Tav&bg=44AE4A&color=fff",
     "cardImage": "https://placehold.co/400x180?text=Tav",
     "info": "52. front kick from the ground<br />53. round kick from the ground<br />54. sidekick from the ground<br />55. getting up"
   }
