@@ -1,0 +1,48 @@
+// Coolors palette variables
+$dark-green: #2A4937;
+$medium-green: #44AE4A;
+$lime-green: #A3CD47;
+$yellow: #F2CC3B;
+$orange: #E8A139;
+$teal: #67C7C6;
+$blue: #41A1DB;
+
+
+// Custom background utility classes (like Tailwind)
+.bg-dark-green-500 { background-color: $dark-green !important; }
+.bg-medium-green-500 { background-color: $medium-green !important; }
+.bg-lime-green-500 { background-color: $lime-green !important; }
+.bg-yellow-500 { background-color: $yellow !important; }
+.bg-orange-500 { background-color: $orange !important; }
+.bg-teal-500 { background-color: $teal !important; }
+.bg-blue-500 { background-color: $blue !important; }
+
+
+
+
+// main.scss
+// Add your custom SCSS here
+//https://coolors.co/palette/2a4937-44ae4a-a3cd47-f2cc3b-e8a139-67c7c6-41a1db
+
+
+// Example: style the timer if you want
+// #slide-timer {
+//   border: 4px solid #44ae4a;
+// }
+
+// Hero section background (after variables)
+.hero-section {
+	background: $medium-green;
+}
+
+// main.scss
+// Add your custom SCSS here
+//https://coolors.co/palette/2a4937-44ae4a-a3cd47-f2cc3b-e8a139-67c7c6-41a1db
+body {
+ 
+}
+
+// Example: style the timer if you want
+// #slide-timer {
+//   border: 4px solid #44ae4a;
+// }

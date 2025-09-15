@@ -6,9 +6,10 @@
     <title>Self Defense Alphabet Meditation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+    <link rel="stylesheet" href="dist/main.css" />
   </head>
-  <body class="bg-gray-50">
-    <section class="py-12">
+  <body class="bg-yellow-500">
+    <section class="py-12 bg-medium-green-500">
       <div
         class="flex flex-col-reverse lg:flex-row-reverse items-center gap-10 lg:gap-20 max-w-7xl mx-auto px-4"
       >
@@ -20,14 +21,14 @@
             <section
               id="hebrew-slideshow"
               tabindex="0"
-              class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] bg-gray-200 flex items-stretch cursor-pointer overflow-hidden"
+              class="relative block mx-auto lg:mx-0 rounded-xl shadow-lg w-full max-w-2xl h-[340px] flex items-stretch cursor-pointer overflow-hidden"
               aria-label="Hebrew Alphabet Slideshow"
             >
-              <div id="slide-timer" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-48 h-48 bg-black/80 text-white text-8xl font-extrabold font-mono rounded-full shadow-2xl border-8 border-green-500 transition-colors duration-300 hidden">
+                <div id="slide-timer" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-48 h-48 text-white text-8xl font-extrabold font-mono rounded-full shadow-2xl border-8 border-green-500 transition-colors duration-300 hidden">
                 <span id="slide-timer-value">10</span>
               </div>
               <div id="slide-inner" class="flex w-full h-full">
-                <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center bg-gray-300">
+                <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center">
                   <img id="slide-image" src="{{image}}" alt="{{name}}" class="object-cover w-full h-full" />
                 </div>
                 <div id="slide-content" class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4">
@@ -38,7 +39,7 @@
               </div>
               <button
                 id="exit-fullscreen"
-                class="hidden absolute top-4 right-4 z-10 px-3 py-1 bg-white/80 rounded text-gray-700 font-semibold shadow hover:bg-white transition"
+                class="hidden absolute top-4 right-4 z-10 px-3 py-1 rounded text-gray-700 font-semibold shadow hover:bg-white transition"
               >
                 Exit Fullscreen
               </button>
@@ -80,7 +81,7 @@
     </section>
 
     <!-- Card Grid Section -->
-    <section class="py-12 bg-white">
+    <section class="py-12">
       <div class="max-w-7xl mx-auto px-4">
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
@@ -93,12 +94,12 @@
     </section>
     <!-- Mustache template for card grid -->
     <script id="card-template" type="x-tmpl-mustache">
-      <div class="bg-gray-100 rounded-xl shadow flex flex-col items-center p-0 pb-6" style="direction: ltr">
-        <img src="{{cardImage}}" alt="Card {{letter}}" class="w-full h-36 object-cover rounded-t-xl" />
-        <h2 class="text-3xl font-bold mb-2 text-center">{{letter}}</h2>
-        <p class="text-gray-600 text-center mb-4">{{{info}}}</p>
-        <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Learn More</a>
-      </div>
+      <div class="rounded-xl shadow flex flex-col items-center p-0 pb-6" style="direction: ltr">
+            <img src="{{cardImage}}" alt="Card {{letter}}" class="w-full h-36 object-cover rounded-t-xl" />
+            <h2 class="text-3xl font-bold mb-2 text-center">{{letter}}</h2>
+            <p class="text-gray-600 text-center mb-4">{{{info}}}</p>
+            <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Learn More</a>
+          </div>
     </script>
     <script>
       // Fetch data.json and render slideshow and cards
