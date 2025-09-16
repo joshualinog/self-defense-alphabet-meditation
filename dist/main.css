@@ -199,6 +199,11 @@ h1, h2, h3, h4, h5, h6,
   padding-top: 2rem;
 }
 
+#slide-info {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 @media (min-width: 640px) {
   #slide-inner {
     flex-direction: row;
@@ -214,6 +219,10 @@ h1, h2, h3, h4, h5, h6,
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0;
+  }
+  #slide-info {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 .letter-card h2 {
