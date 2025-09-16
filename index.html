@@ -6,6 +6,12 @@
     <title>Self Defense Alphabet Meditation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body class="bg-yellow-500">
@@ -48,14 +54,15 @@
         </div>
         <div class="w-full lg:w-1/2">
           <h1
-            class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4"
+            class="text-5xl md:text-6xl font-bold text-dark-green-500 leading-tight mb-4 font-bangers"
           >
             The Self Defense Alphabet <br />
-            <span class="uppercase tracking-widest text-base"
+            <span
+              class="uppercase tracking-widest text-3xl text-lime-green-500 font-rubik"
               >A Meditation</span
             >
           </h1>
-          <p class="text-lg text-gray-700 mb-6">
+          <p class="text-lg text-dark-green-500 mb-6">
             This is a tool for people who want to combine meditation with play
             with exercise. Or if you just want to exercise and learn the
             fundamentals of the Krav Maga self-defense system, you can use our
@@ -65,15 +72,15 @@
           <div class="flex flex-col md:flex-row gap-3 md:gap-4">
             <button
               type="button"
-              class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+              class="px-6 py-3 bg-lime-green-500 text-dark-green-500 text-lg font-semibold rounded-lg shadow hover:bg-blue-500 transition"
             >
-              Primary
+              Letter Studies
             </button>
             <button
               type="button"
-              class="px-6 py-3 border-2 border-gray-400 text-gray-700 text-lg font-semibold rounded-lg hover:bg-gray-100 transition"
+              class="px-6 py-3 bg-yellow-500 text-dark-green-500 text-lg font-semibold rounded-lg hover:bg-blue-100 transition"
             >
-              Default
+              Workouts
             </button>
           </div>
         </div>
@@ -94,12 +101,12 @@
     </section>
     <!-- Mustache template for card grid -->
     <script id="card-template" type="x-tmpl-mustache">
-      <div class="rounded-xl shadow flex flex-col items-center p-0 pb-6" style="direction: ltr">
-            <img src="{{cardImage}}" alt="Card {{letter}}" class="w-full h-36 object-cover rounded-t-xl" />
-            <h2 class="text-3xl font-bold mb-2 text-center">{{letter}}</h2>
-            <p class="text-gray-600 text-center mb-4">{{{info}}}</p>
-            <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Learn More</a>
-          </div>
+      <div class="letter-card rounded-xl shadow flex flex-col items-center p-0 pb-6 bg-medium-green-500 text-yellow-500" style="direction: ltr">
+                    <img src="{{cardImage}}" alt="Card {{letter}}" class="w-full h-36 object-cover rounded-t-xl" />
+              <h2 class="text-3xl font-bold mb-2 text-center hebrew-letter-heading">{{letter}}</h2>
+                    <p class="text-yellow-500 text-center mb-4">{{{info}}}</p>
+                    <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Learn More</a>
+                  </div>
     </script>
     <script>
       // Fetch data.json and render slideshow and cards

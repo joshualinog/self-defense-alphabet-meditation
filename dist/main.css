@@ -30,8 +30,84 @@
   background-color: #41A1DB !important;
 }
 
+.text-dark-green-500 {
+  color: #2A4937 !important;
+}
+
+.text-medium-green-500 {
+  color: #44AE4A !important;
+}
+
+.text-lime-green-500 {
+  color: #A3CD47 !important;
+}
+
+.text-yellow-500 {
+  color: #F2CC3B !important;
+}
+
+.text-orange-500 {
+  color: #E8A139 !important;
+}
+
+.text-teal-500 {
+  color: #67C7C6 !important;
+}
+
+.text-blue-500 {
+  color: #41A1DB !important;
+}
+
 .hero-section {
   background: #44AE4A;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.font-bangers {
+  font-family: "Bangers", cursive !important;
+}
+
+.font-rubik {
+  font-family: "Rubik", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.hebrew-letter-heading,
+#slide-letter {
+  font-family: "Rubik", sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.01em;
+}
+
+#slide-content, #slide-content * {
+  color: #2A4937 !important;
+}
+
+#slide-label {
+  font-family: "Rubik", sans-serif !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.25rem;
+  color: #2A4937 !important;
+  text-transform: uppercase;
+}
+
+#slide-info {
+  font-family: "Bangers", cursive !important;
+  font-size: 2rem !important;
+  color: #41A1DB !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+}
+
+.letter-card h2 {
+  font-size: 2.5rem;
+}
+.letter-card p {
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=main.css.map */

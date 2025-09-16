@@ -1,4 +1,6 @@
 
+
+
 // Coolors palette variables
 $dark-green: #2A4937;
 $medium-green: #44AE4A;
@@ -22,7 +24,14 @@ $blue: #41A1DB;
 .bg-teal-500 { background-color: $teal !important; }
 .bg-blue-500 { background-color: $blue !important; }
 
-
+//custom text color utility classes
+.text-dark-green-500 { color: $dark-green !important; }
+.text-medium-green-500 { color: $medium-green !important; }
+.text-lime-green-500 { color: $lime-green !important; }
+.text-yellow-500 { color: $yellow !important; }
+.text-orange-500 { color: $orange !important; }
+.text-teal-500 { color: $teal !important; }
+.text-blue-500 { color: $blue !important; }
 
 
 // main.scss
@@ -44,10 +53,49 @@ $blue: #41A1DB;
 // Add your custom SCSS here
 //https://coolors.co/palette/2a4937-44ae4a-a3cd47-f2cc3b-e8a139-67c7c6-41a1db
 body {
- 
+ font-family: 'Rubik', sans-serif;
 }
 
 // Example: style the timer if you want
 // #slide-timer {
 //   border: 4px solid #44ae4a;
 // }
+// Font family utility classes
+.font-bangers { font-family: 'Bangers', cursive !important; }
+.font-rubik { font-family: 'Rubik', sans-serif !important; }
+
+// All headings and Hebrew letter headings use Rubik Black
+h1, h2, h3, h4, h5, h6,
+.hebrew-letter-heading,
+#slide-letter {
+	font-family: 'Rubik', sans-serif !important;
+	font-weight: 900 !important;
+	letter-spacing: 0.01em;
+}
+// All text in the right side of the slide (slide-content) is dark green
+#slide-content, #slide-content * {
+	color: $dark-green !important;
+}
+#slide-label {
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 1rem !important;
+    letter-spacing: .25rem;
+    color: $dark-green !important;
+    text-transform: uppercase;
+}
+#slide-info{
+    font-family: 'Bangers', cursive !important;
+    font-size: 2rem !important;
+    color: $blue !important;
+    font-weight: 300 !important;
+    line-height: 1.5 !important;
+}
+.letter-card{
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.25rem;
+        font-weight: 100;
+    }
+}
