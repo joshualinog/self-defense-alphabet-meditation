@@ -1,3 +1,12 @@
+#slide-timer-value {
+    font-size: 2.5rem;
+}
+
+@media (min-width: 640px) {
+    #slide-timer-value {
+        font-size: 4.5rem;
+    }
+}
 // Force column layout and 100% width for fullscreen vertical split
 .fullscreen #slide-inner {
     flex-direction: column !important;
@@ -27,13 +36,14 @@
 .fullscreen #slide-timer {
     display: flex !important;
 }
+
 #slide-timer {
-    width: 9rem;
-    height: 9rem;
-    max-width: 9rem;
-    max-height: 9rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    max-width: 4.5rem;
+    max-height: 4.5rem;
     left: 50%;
-    top: 50%;
+    top: 33.3333%;
     bottom: auto;
     right: auto;
     transform: translate(-50%, -50%);
