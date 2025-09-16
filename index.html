@@ -31,7 +31,7 @@
                 <div id="slide-image-container" class="w-1/2 h-full flex items-center justify-center">
                   <img id="slide-image" src="{{image}}" alt="{{name}}" class="object-cover w-full h-full" />
                 </div>
-                <div id="slide-content" class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4">
+                <div id="slide-content" class="w-1/2 flex flex-col justify-center items-center text-center select-none px-4 {{#isAlef}}bg-yellow-500{{/isAlef}}">
                   <span id="slide-letter" class="text-8xl font-extrabold text-gray-800">{{letter}}</span>
                   <div class="mt-4 text-lg text-gray-600" id="slide-label">{{name}}</div>
                   <div class="mt-4 text-base text-gray-600" id="slide-info">{{{info}}}</div>
@@ -113,12 +113,14 @@
 
       function renderSlideshow(slide) {
         // Only render once if not present
+        // Add isAlef property for Mustache
+        const slideWithFlags = { ...slide, isAlef: slide.letter === "א" };
         if (!document.getElementById("hebrew-slideshow")) {
           const template =
             document.getElementById("slideshow-template").innerHTML;
           document.getElementById("slideshow-root").innerHTML = Mustache.render(
             template,
-            slide
+            slideWithFlags
           );
         }
         slideshowEl = document.getElementById("hebrew-slideshow");
