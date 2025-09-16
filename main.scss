@@ -1,3 +1,61 @@
+// Force column layout and 100% width for fullscreen vertical split
+.fullscreen #slide-inner {
+    flex-direction: column !important;
+    height: 100%;
+}
+.fullscreen #slide-image-container {
+    width: 100% !important;
+    height: 33.3333% !important;
+}
+.fullscreen #slide-content {
+    width: 100% !important;
+    height: 66.6667% !important;
+}
+// Ensure vertical division in fullscreen mode
+.fullscreen #slide-inner {
+    height: 100%;
+}
+.fullscreen #slide-image-container {
+    height: 33.3333%;
+}
+.fullscreen #slide-content {
+    height: 66.6667%;
+}
+// Mobile-first: Timer is 75% size and centered on small screens
+
+// Only show timer in fullscreen mode
+.fullscreen #slide-timer {
+    display: flex !important;
+}
+#slide-timer {
+    width: 9rem;
+    height: 9rem;
+    max-width: 9rem;
+    max-height: 9rem;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    #slide-timer {
+        width: 9rem;
+        height: 9rem;
+        max-width: 9rem;
+        max-height: 9rem;
+        left: 50%;
+        top: auto;
+        bottom: 2rem;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
 
 
 
@@ -85,11 +143,57 @@ h1, h2, h3, h4, h5, h6,
 }
 #slide-info{
     font-family: 'Bangers', cursive !important;
-    font-size: 1.75rem !important;
+    font-size: 1.25rem !important;
     color: $blue !important;
     font-weight: 300 !important;
-    line-height: 2rem !important;
+    line-height: 1.25rem !important;
 }
+
+// Responsive styles for slideshow layout
+#slide-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+#slide-image-container {
+    width: 100%;
+    height: 33.3333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#slide-content {
+    width: 100%;
+    height: 66.6667%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 640px) {
+    #slide-inner {
+        flex-direction: row;
+    }
+    #slide-image-container {
+        width: 50%;
+        height: 100%;
+    }
+    #slide-content {
+        width: 50%;
+        height: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .letter-card{
     h2{
         font-size: 2.5rem;

@@ -241,6 +241,7 @@
         } else if (slideshowEl.msRequestFullscreen) {
           slideshowEl.msRequestFullscreen();
         }
+        slideshowEl.classList.add("fullscreen");
         exitBtn.classList.remove("hidden");
         // Do not start slideshow here; wait for fullscreenchange event
       }
@@ -253,6 +254,7 @@
         } else if (document.msExitFullscreen) {
           document.msExitFullscreen();
         }
+        if (slideshowEl) slideshowEl.classList.remove("fullscreen");
         exitBtn.classList.add("hidden");
         showTimer(false);
       }
@@ -268,8 +270,10 @@
 
       document.addEventListener("fullscreenchange", () => {
         if (document.fullscreenElement === slideshowEl) {
+          slideshowEl.classList.add("fullscreen");
           startSlideshow();
         } else {
+          if (slideshowEl) slideshowEl.classList.remove("fullscreen");
           stopSlideshow();
           if (exitBtn) exitBtn.classList.add("hidden");
           // Always show the first slide when exiting fullscreen
