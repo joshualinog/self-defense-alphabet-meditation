@@ -96,10 +96,10 @@ h1, h2, h3, h4, h5, h6,
 
 #slide-info {
   font-family: "Bangers", cursive !important;
-  font-size: 2rem !important;
+  font-size: 1.75rem !important;
   color: #41A1DB !important;
   font-weight: 300 !important;
-  line-height: 1.5 !important;
+  line-height: 2rem !important;
 }
 
 .letter-card h2 {
