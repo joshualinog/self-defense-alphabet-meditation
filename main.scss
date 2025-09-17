@@ -1,3 +1,50 @@
+@media (min-width: 640px) {
+    html, body {
+        height: 100%;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-app-container {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+    #hebrew-slideshow {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+        height: 100%;
+    }
+    #slide-inner {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        min-height: 0;
+        height: 100%;
+        align-items: stretch;
+    }
+    #slide-image-container, #slide-content {
+        width: 50%;
+        flex: 1 1 0;
+        min-height: 0;
+        height: auto;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 ;
+    }
+    #slide-info {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+}
 
 @media (min-width: 640px) {
     #hebrew-slideshow {
@@ -124,10 +171,7 @@ $orange: #E8A139;
 $teal: #67C7C6;
 $blue: #41A1DB;
 
-// Fullscreen slider right half background
-.slider-right-fullscreen.bg-yellow-500 {
-	background-color: $yellow !important;
-}
+
 
 // Custom background utility classes (like Tailwind)
 .bg-dark-green-500 { background-color: $dark-green !important; }
@@ -186,6 +230,14 @@ h1, h2, h3, h4, h5, h6,
 	font-weight: 900 !important;
 	letter-spacing: 0.01em;
 }
+
+
+
+
+// Fullscreen slider right half background
+.slider-right-fullscreen.bg-yellow-500 {
+	background-color: $yellow !important;
+}
 // All text in the right side of the slide (slide-content) is dark green
 #slide-content, #slide-content * {
 	color: $dark-green !important;
@@ -210,6 +262,7 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
     height: 100%;
 }
+
 
 
 #slide-image-container {
@@ -251,14 +304,14 @@ h1, h2, h3, h4, h5, h6,
 @media (min-width: 640px) {
     #slide-inner {
         flex-direction: row;
-        height: 100%;
+        height: 340px;
     }
     #slide-image-container {
         width: 50%;
-        height: 100%;
+        height: 100%; // Only 100% height at sm+ (not fullscreen)
     }
     #slide-content {
-        width: 50%;
+        width: 0%;
         height: 100%;
         min-height: 0;
         justify-content: center;
@@ -271,6 +324,11 @@ h1, h2, h3, h4, h5, h6,
     #slide-info {
         font-size: 1.25rem;
         line-height: 1.25rem;
+    }
+    .fullscreen {
+        #slide-inner {
+           
+        }
     }
 }
 

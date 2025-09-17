@@ -169,10 +169,18 @@
   },
   {
     "order": 21,
+    "letter": "ש",
+    "name": "Sin",
+    "image": "https://placehold.co/400x340/41A1DB/A3CD47?text=Sin",
+    "cardImage": "https://placehold.co/400x180?text=Sin",
+    "info": "52. front kick from the ground<br />53. round kick from the ground<br />54. sidekick from the ground<br />"
+  },
+  {
+    "order": 22,
     "letter": "ת",
     "name": "Tav",
     "image": "https://placehold.co/400x340/41A1DB/A3CD47?text=Tav",
     "cardImage": "https://placehold.co/400x180?text=Tav",
-    "info": "52. front kick from the ground<br />53. round kick from the ground<br />54. sidekick from the ground<br />55. getting up"
+    "info": "55. getting up"
   }
 ]
